@@ -1,0 +1,15 @@
+#include <stdio.h>
+void main()
+{
+int n=200;
+int f[200][200];
+for(int k=2;k<n;k++)
+for(int i=0;i<n-k;i++){
+int j=i+k;
+for(int p=i+1;p<j;p++){
+int a=f[i][p]+f[p][j];
+if (f[i][j]>a)
+f[i][j]=a;
+}
+}
+}
